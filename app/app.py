@@ -15,7 +15,6 @@ app.config['MYSQL_DATABASE_PASSWORD'] = env['MYSQL_ROOT_PASSWORD']
 app.config['MYSQL_DATABASE_DB'] = env['MYSQL_DB']
 app.config['MYSQL_DATABASE_HOST'] = env['MYSQL_HOST']
 mysql.init_app(app)
-
 conn = mysql.connect()
 cursor =conn.cursor()
 auth = HTTPBasicAuth()
