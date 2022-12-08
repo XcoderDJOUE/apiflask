@@ -1,0 +1,36 @@
+version: '3'
+services:
+  flaskapi:
+    container_name: flaskproject
+    image: apiflask
+    build: .
+    ports:
+      - "5000:5000"
+    links:
+      - "mysql_db"
+  mysql_db: 
+    container_name: ${SERVER_MYSQL}
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB}
+    ports:
+      - "3306:3306"
+    volumes:
+      - "flask_volume:/var/lib/mysql"
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: ${SERVER_MYSQL}
+      PMA_ARBITRARY: 1
+      PMA_PORT: 3306
+    ports:
+      - "3000:80"
+    links:
+      - "mysql_db"
+volumes:
+  flask_volume: 
+      
