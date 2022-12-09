@@ -34,8 +34,8 @@ apiflask is a api rest to registering, loging, verify email by received code and
 - requirements
 
 __app__ is the pricipale folder to put all project manuel resources.
-__crud__ is a database folderto create my sql request to get or put information since my db. i contain the file usercrud only because i have single table in my database
-__models__ is a folder to rang a request shema. i contain a single file named users.
+__crud__ is a database folderto create my sql request to get or put information since my db. he contain the file usercrud only because i have single table in my database
+__models__ is a folder to rang a request shema. he contain a single file named users.
 __services__ is for my custom method and  my reused function in all application. the file who contain my custom function isnamed utils
 __app__ file is the main of my application. i import my apiflask packages in this file.
 __wsgi__ it's the entry point of my application to run my application in production environnement with gunicorn.
