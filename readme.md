@@ -2,7 +2,7 @@
 ## readme
 
 
-apiflask is a api rest to registering, loging, verify email by received code and login is authby the basic auth .
+apiflask is an api rest to registering, loging, verify email by received code and login is auth by the basic auth .
 
 ##summary
 - 1 project architecture schema
@@ -33,10 +33,10 @@ apiflask is a api rest to registering, loging, verify email by received code and
 - readme.md(file)
 - requirements
 
-__app__ is the pricipale folder to put all project manuel resources.
-__crud__ is a database folderto create my sql request to get or put information since my db. he contain the file usercrud only because i have single table in my database
-__models__ is a folder to rang a request shema. he contain a single file named users.
-__services__ is for my custom method and  my reused function in all application. the file who contain my custom function isnamed utils
+__app__ is main folder to set all custom project resources.
+__crud__ is a database folder to create my sql request to get or put information from my db. it contain only file usercrud, because i have single table in my database.
+__models__ is a folder to set a request shema. it contain a single file named users.
+__services__ is my custom method and  my global function. the file who contain my custom function is named utils.
 __app__ file is the main of my application. i import my apiflask packages in this file.
 __wsgi__ it's the entry point of my application to run my application in production environnement with gunicorn.
 other file is the configuration file
@@ -44,8 +44,8 @@ other file is the configuration file
 
 ## 2 instruction to run and test this application
 
-- you can clone my application the git repos in the end of this documentation or the reception end project email you're receive 
-- open the project in you're favorite code editor
+- you can clone my application from this git repos
+- open the project in your favorite code editor
 - you can run ``` pip install -r requirements.txt ``` cmd to install all project dependencies if you excecute in localy without docker
 - if you use docker . run ```docker-compose --env-file=.env.prod up -d``` in docker commande print to create image, create your container and build all microservice app i created in dockercompose file
 - normally the application run and you can verify in your browser __localhost:5000/docs__
